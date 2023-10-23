@@ -9,7 +9,6 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
 		int[] numberList = new int[10000];
 		Arrays.fill(numberList, 0);
@@ -19,10 +18,10 @@ public class Main {
 		
 		for(int i=0;i<10000;i++) {
 			if(numberList[i]!=0) {
-				for(int j=0;j<numberList[i];j++)sb.append((i+1)+"\n");
+				for(int j=0;j<numberList[i];j++)bw.write((i+1)+"\n");;
 			}
 		}
-		bw.write(sb+"\n");
+		
 		bw.flush();
 		bw.close();
 	}
