@@ -1,5 +1,2 @@
 def solution(n, k):
-    answer = []
-    for i in range(k,n+1,k) :
-        answer.append(i)
-    return answer
+    return list(i for i in range(k,n+1,k))
