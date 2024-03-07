@@ -4,7 +4,4 @@ def solution(num_list):
     for i in num_list:
         sum += i
         mul *= i
-    if mul < sum**2:
-        return 1
-    else :
-        return 0
+    return 1 if mul < sum**2 else 0
