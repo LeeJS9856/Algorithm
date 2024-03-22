@@ -1,5 +1,3 @@
 def solution(arr, idx):
-    for num, i in enumerate(arr[idx:], idx) :
-        if i == 1 :
-            return num
-    return -1
+    answer = ''.join(map(str, arr))
+    return answer.find('1', idx)
