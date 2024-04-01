@@ -1,11 +1,9 @@
 def solution(arr, flag):
     X = []
-    for i in zip(arr, flag) :
-        if i[1] :
-            for j in range(i[0]*2) :
-                X.append(i[0])
+    for i , j in zip(arr, flag) :
+        if j :
+            X += [i] * i * 2
         else :
-            for j in range(i[0]) :
-                X.pop()
+            X = X[:-i]
     return X
             
